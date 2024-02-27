@@ -1,21 +1,32 @@
 package address;
 
 import address.data.AddressBook;
-import address.data.AddressEntry;
+
+/**
+ * The main application class for the Address Book Application.
+ * This class initializes the application, including the AddressBook and Menu,
+ * and starts the user interaction process through the menu system.
+ *
+ * @author Hasibullah Ayoubi
+ * @since Feb. 26, 2024
+ * @version 1
+ */
 
 public class AddressBookApplication {
 
+    /**
+     * The main entry point for the Address Book Application.
+     * Initializes the AddressBook and Menu, displays a welcome message,
+     * and starts the menu interaction loop. Upon exiting the menu,
+     * displays a goodbye message.
+     *
+     * @param args Command line arguments
+     */
     public static void main(String[] args) {
-        AddressBook ab = new AddressBook();
-        initAddressBookExercise(ab);
-    }
-
-    public static void initAddressBookExercise(AddressBook ab) {
-        AddressEntry entry1 = new AddressEntry("John", "Doe", "123 Main St", "Hayward", "CA", 94541, "123-555-1234", "john@gmail.com");
-        AddressEntry entry2 = new AddressEntry("Hasib", "Ayoubi", "456 A St", "Livermore", "CA", 94550, "123-555-5678", "hasib@yahoo.com");
-
-        ab.add(entry1);
-        ab.add(entry2);
-        ab.list();
+        AddressBook addressBook = new AddressBook();
+        Menu menu = new Menu(addressBook);
+        System.out.println("Welcome to the Address Book Application!");
+        menu.displayMenu();
+        System.out.println("Thank you for using the Address Book Application. Goodbye!");
     }
 }
