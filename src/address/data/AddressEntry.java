@@ -1,10 +1,14 @@
 package address.data;  // Declaring package name
 
 /**
- * Represents an entry in an address book.
- */
-public class AddressEntry {
-    // Declaring a class named AddressEntry
+ * The AddressEntry class represents an entry in an address book.
+ * contains variables firstName, lastName, street, city, state, zip, telephone, email for storing address details
+ *@author Hasibullah Ayoubi
+ *@since Feb. 26, 2024
+ *@version 1
+ **/
+
+public class AddressEntry { // Declaring a class named AddressEntry
 
     // Declaring private instance variables for storing address details
 
@@ -53,7 +57,7 @@ public class AddressEntry {
      */
     public AddressEntry(){  // Constructor with no arguments
 
-    };
+    }
 
     /**
      * Constructor with arguments to initialize instance variables.
@@ -84,14 +88,12 @@ public class AddressEntry {
      * @return A string representation of the AddressEntry object.
      */
     public String toString() {
-        return  firstName + "\n" +  // Concatenating first name with a newline character
-                lastName + "\n" +  // Concatenating last name with a newline character
-                street + "\n" +  // Concatenating street with a newline character
-                city + "\n" +  // Concatenating city with a newline character
-                state + "\n" +  // Concatenating state with a newline character
-                zip + "\n" +  // Concatenating zip with a newline character
-                telephone + "\n" +  // Concatenating telephone with a newline character
-                email + "\n";  // Concatenating email with a newline character
+        return  firstName +" "+ lastName + "\n" +
+                street + "\n" +
+                city +", "+ state +" "+ zip + "\n" +
+                email + "\n" +
+                telephone;
+
     }
 
     // Getter methods to retrieve values of instance variables
